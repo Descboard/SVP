@@ -1,16 +1,17 @@
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-from app.camera.camera import Camera
 import cv2
+from app.camera.camera import Camera
+from app.recognition.plate_recognition import PlateRecognizer
 
 def main():
     camera = Camera()
+    recognizer = PlateRecognizer()
     try:
         camera.start()
         while True:
             frame = camera.get_frame()
+            plates = recognizer.recognize_plate(frame)
+            for plate, prob in plates:
+                print(f"Placa detectada: {plate} (Confianza: {prob:.2f})")
             cv2.imshow("Frame", frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
