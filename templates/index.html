@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SmartView Patrol - Control Vehicular Inteligente</title>
+  <meta name="description" content="Sistema inteligente de reconocimiento de placas en tiempo real para fiscalización y seguridad pública.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400i|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/themefisher-fonts.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+</head>
+
+<body id="body">
+
+    <div id="preloader">
+        <div class="book">
+            <div class="book__page"></div>
+            <div class="book__page"></div>
+            <div class="book__page"></div>
+        </div>
+    </div>
+
+  <div class="container">
+    <nav class="navbar navbar-fixed-top navigation" id="top-nav">
+      <a class="navbar-brand" href="#"><img src="images/logo.png" alt="SmartView Patrol"></a>
+      <button class="navbar-toggler hidden-lg-up float-lg-right" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <i class="tf-ion-android-menu"></i>
+      </button>
+      <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+        <ul class="nav navbar-nav menu float-lg-right">
+          <li class="nav-item active"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#service">Soluciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <section class="hero-area bg-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="block">
+            <h1 class="wow fadeInDown">SmartView Patrol — Identifica a todos en la ruta</h1>
+            <p class="wow fadeInDown">Reconocimiento automático de patentes vehiculares con visión computacional en tiempo real. Ideal para fiscalización, control de acceso y seguridad pública.</p>
+            <div class="wow fadeInDown">
+              <a class="btn btn-home" href="http://192.168.100.7:5000/placas" role="button">Ver Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 wow zoomIn">
+          <div class="block">
+            
+            <div class="counter text-center">
+                <ul id="countdown_dashboard">
+                    <li>
+                        <div class="dash days_dash">
+                            <div class="digit">0</div>
+                            <div class="digit">1</div>
+                            <div class="digit">0</div>
+                            <span class="dash_title">Dias</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dash hours_dash">
+                            <div class="digit">2</div>
+                            <div class="digit">0</div>
+                            <span class="dash_title">Horas</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dash minutes_dash">
+                            <div class="digit">3</div>
+                            <div class="digit">5</div>
+                            <span class="dash_title">Minutos</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dash seconds_dash">
+                            <div class="digit">0</div>
+                            <div class="digit">0</div>
+                            <span class="dash_title">Segundos</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about bg-gray" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 wow fadeInLeft">
+          <div class="content">
+            <div class="sub-heading">
+              <h3>Vigilancia Vehicular Inteligente para Ciudades Más Seguras</h3>
+            </div>
+            <p>SmartView Patrol es una solución tecnológica basada en visión computacional y machine learning que permite detectar y registrar placas vehiculares en tiempo real.</p>
+            <p>Dirigido a municipios, organismos públicos y empresas privadas que requieran control vehicular eficiente y automatizado, sin intervención humana.</p>
+          </div>
+        </div>
+        <div class="col-md-5 wow fadeInLeft" data-wow-delay="0.3s">
+          <div class="about-slider">
+            <img src="{{ url_for('static', filename='images/about/2.jpg') }}" alt="Sistema en operación" class="img-fluid">
+            <img src="{{ url_for('static', filename='images/about/3.jpg') }}" alt="Vista técnica del sistema" class="img-fluid">
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="service section">
+    <div class="container">
+      <div class="row">
+        <div class="heading wow fadeInUp">
+          <h2>Características Principales</h2>
+          <p>Una solución robusta, rápida y adaptable a múltiples contextos de operación.</p>
+        </div>
+        <div class="col-sm-6 col-md-3 wow fadeInLeft">
+          <div class="block">
+            <i class="tf-globe"></i>
+            <h3>Captura en Tiempo Real</h3>
+            <p>Reconocimiento instantáneo de placas desde video en vivo o cámaras IP.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.3s">
+          <div class="block">
+            <i class="tf-desktop"></i>
+            <h3>Plataforma Web</h3>
+            <p>Interfaz intuitiva para visualizar resultados y gestionar registros.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.6s">
+          <div class="block">
+            <i class="tf-circle-compass"></i>
+            <h3>Almacenamiento Seguro</h3>
+            <p>Registro automático en base de datos o planilla con cifrado y respaldo.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.9s">
+          <div class="block">
+            <i class="tf-strategy"></i>
+            <h3>IA Personalizable</h3>
+            <p>Adaptamos la precisión del OCR y detección a tus condiciones locales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="call-to-action section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="block">
+            <h2>Recibe Noticias de SmartView Patrol</h2>
+            <p>Déjanos tu correo para enterarte de nuestro lanzamiento oficial y novedades.</p>
+            <div class="col-lg-6 offset-lg-3">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Tu correo electrónico">
+                <span class="input-group-btn">
+                  <button class="btn btn-default btn-subscription" type="button">Suscribirme</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <div class="heading wow fadeInUp">
+              <h2>Contáctanos</h2>
+              <p>¿Te interesa nuestro sistema? Escríbenos y te enviaremos una demo o agendaremos una reunión.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 offset-md-3 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="form-group">
+            <form action="#" method="post" id="contact-form">
+              <div class="input-field">
+                <input type="text" class="form-control" placeholder="Nombre" name="name">
+              </div>
+              <div class="input-field">
+                <input type="email" class="form-control" placeholder="Correo" name="email">
+              </div>
+              <div class="input-field">
+                <textarea class="form-control" placeholder="Mensaje" rows="3" name="message"></textarea>
+              </div>
+              <button class="btn btn-send" type="submit">Enviar</button>
+            </form>
+
+            <div id="success">
+              <p>Tu mensaje ha sido enviado exitosamente.</p>
+            </div>
+            <div id="error">
+              <p>Hubo un problema al enviar tu mensaje. Intenta más tarde.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block text-center">
+            <p>&copy; 2025 SmartView Patrol | Desarrollado con tecnología nacional</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+   
+
+   <!-- jQuery (antes de otros scripts que lo usen) -->
+   <script src="{{ url_for('static', filename='js/vendor/jquery-2.1.1.min.js') }}"></script>
+
+   <!-- Plugin de cuenta regresiva -->
+   <script src="{{ url_for('static', filename='js/jquery.lwtCountdown-1.0.js') }}"></script>
+
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js" integrity="sha512-j+2aAYcBj+dnV3xvReEDZSCwz7ZfZLZkXMMHBgd6LmnP7WWOpGnQ4ZHzNFAK2hEsTJY++pHuNa49Z3Y1nIbOrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+   <script src="{{ url_for('static', filename='js/vendor/modernizr-2.6.2.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/jquery.validate.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/jquery.form.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/jquery.nav.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+
+  <!-- Fix: Ocultar preloader correctamente -->
+  <script>
+    $(window).on('load', function () {
+      $('#preloader').fadeOut('slow', function () {
+        $(this).remove();
+      });
+    });
+  </script>
+  
+    <!-- Inicializar cuenta regresiva -->
+    <script>
+        $(document).ready(function () {
+          if ($('#countdown').length > 0) {
+            $('#countdown').countdown('2025/09/30', function (event) {
+              $(this).html(event.strftime('%D d\u00edas %H:%M:%S'));
+            });
+          }
+        });
+      </script>
+
+
+</body>
+</html>

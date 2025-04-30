@@ -1,25 +1,33 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import cv2
-from app.camera.camera import Camera
-from app.recognition.plate_recognition import PlateRecognizer
+from app.recognition.plate_detector import PlateDetector
 
-def main():
-    camera = Camera()
-    recognizer = PlateRecognizer()
-    try:
-        camera.start()
-        while True:
-            frame = camera.get_frame()
-            plates = recognizer.recognize_plate(frame)
-            for plate, prob in plates:
-                print(f"Placa detectada: {plate} (Confianza: {prob:.2f})")
-            cv2.imshow("Frame", frame)
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
-    except Exception as e:
-        print(f"Error: {e}")
-    finally:
-        camera.stop()
-        cv2.destroyAllWindows()
+def test_plate_detection_from_webcam():
+    detector = PlateDetector()
 
-if __name__ == "__main__":
-    main()
+    cap = cv2.VideoCapture(0)
+    if not cap.isOpened():
+        print("No se pudo acceder a la cámara.")
+        return
+
+    print("Presiona 'q' para salir...")
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            print("No se pudo leer el frame.")
+            break
+
+        results = detector.detect(frame)
+        for plate_text, (x, y, w, h) in results:
+            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            cv2.putText(frame, plate_text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
+
+        cv2.imshow("Detección de Patentes", frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
